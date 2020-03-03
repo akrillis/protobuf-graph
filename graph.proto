@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package graph;
+
+message MsisdnImsiImei {
+    string Msisdn = 1;
+    string Imsi   = 2;
+    string Imei   = 3;
+}
+
+service Loader {
+    rpc Mii (MsisdnImsiImei) returns (google.protobuf.Empty) {}
+}
